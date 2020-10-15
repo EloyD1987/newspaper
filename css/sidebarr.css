@@ -1,0 +1,6 @@
+.sidebarr{
+    flex: 20%;
+    background-color: rgb(143, 220, 20);
+    order:3;
+    border: 2px red solid;
+}

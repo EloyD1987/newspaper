@@ -1,0 +1,44 @@
+
+header{
+    
+    background-color: blue;
+    padding-top: 20px ;
+    font-family: 'Times New Roman', Times, serif;
+    border: grey;
+    flex-basis: 100%;
+}
+/* Tittle*/
+header h1{
+    font-size: 80px;
+    text-align: center;
+    vertical-align: center;
+    padding: 20px;
+} 
+/* Navigation Bar*/
+.navbar {
+    display: flex;
+    background-color: #333;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    text-align: center;
+    padding:10px 0px 10px 0px ;
+   
+}   
+.navbar li{
+    text-align: center;  
+}
+.navbar a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    
+}
+.navbar a:hover{
+    border-color: red;
+    border-style: solid;
+    border-width: 0.2px;
+}

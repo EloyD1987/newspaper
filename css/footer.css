@@ -1,9 +1,9 @@
 .footer{
     display: flex;
-    font-size: 20px;
-    background-color: silver;
-    align-items: center;
     flex-basis: 100%;
+    background-color: silver;
+    font-size: 20px;
+    
 }
 .footer p{
     text-align: center;

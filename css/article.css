@@ -1,13 +1,53 @@
+/*@media (min-width: 480px) {
+@media (min-width: 768px) {
+@media (min-width: 900px) {
+@media (min-width: 1024px) {
+@media (min-width: 1200px) {
+*/
+
+
+
+
 .container{
     display: flex;
-    width: 100%;  
-   
+    flex-direction: column;
+    width: 100%;   
 }
 .main{
     background-color:green;
     border: 1px red solid;
-    width: 50%;
-    height: 100%;
-    order:3;
+    width: 100%;
+    flex-direction: row;
 }
-
+.main div{
+    border: 1px black solid;
+    width: 50%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.main img {
+    width: 85%;
+    padding: 20px;  
+    
+}
+/*media*/ 
+@media (min-width: 480px) {
+    .navbar {
+        display: flex; 
+    }
+    .container {
+        flex-direction: row; 
+    }  
+    .main {
+        flex: 60%;
+        order: 2;
+    }
+    .sidebarl {
+        flex: 20%;
+        order: 1;
+    }
+    .sidebarr {
+        flex: 20%;
+        order: 3;
+    }
+}

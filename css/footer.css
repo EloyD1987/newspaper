@@ -1,6 +1,7 @@
 .footer{
     display: flex;
     flex-basis: 100%;
+    border: 4px black solid;
     background-color: silver;
     font-size: 20px;
     

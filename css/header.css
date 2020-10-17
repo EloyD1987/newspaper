@@ -8,13 +8,13 @@
     justify-content: center;
     width:  100%;
     padding-top: 20px ;
-    font-family: 'Times New Roman', Times, serif;
-    border: grey;
+    border: 4px black solid ;
     background-color: blue;
     font-family: 'Times New Roman', Times, serif;
 }
 /* Tittle*/
 .header h1{
+    display: flex;
     padding: 20px;
     font-size: 80px;
     text-align: center;

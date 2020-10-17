@@ -1,29 +1,29 @@
 
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     flex: 100%;       
 }
 .main{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     order: 1;
     flex: 100%;
     background-color:green;
-    border: 4px black solid;
-    
-    
+    border: 4px black solid;   
 }
 .main div{
     border-bottom: 1px black solid;
-    flex: 100%;
+    flex-basis: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
 }
 .main img {
-    width: 60%;
-    padding: 30;  
+    width: 90%;
+    padding: 10;  
     
 }

@@ -49,19 +49,20 @@
 }   
 .navbar li{
     display: flex;
+    justify-content: space-between;
     text-align: center; 
     flex-wrap: wrap; 
    
 }
-.navbar a{
+.navbar a {
     display: flex;
+    flex-wrap: wrap; 
     color: white;
     padding: 10px;
     text-decoration: none;
-    text-align: center;
-    flex-wrap: wrap;   
+    text-align: center; 
 }
-.navbar a:hover{
+.navbar a:hover {
     border-color: red;
     border-style: solid;
     border-width: 0.2px;

@@ -20,10 +20,13 @@
     padding:10px 0px 10px 0px ; 
 }  
 .sidebarl h3{
+    justify-content: center;
+    text-decoration: underline;
     color:black;
     font-size: 14px;
 }
 .sidebarl p {
+    text-align: center;
     display:none;
 }
   

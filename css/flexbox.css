@@ -8,13 +8,16 @@
 /*media*/ 
 
 @media (min-width: 480px) {
-    /*HEAD*/
+    /*HEADER*/
     .header{
         display: flex;
         flex-direction: row;
     }
     .header button {
         display: none;
+    }
+    .header h1 {
+        font-size: 80px;
     }
     /*NAVBAR*/
     .navbar {
@@ -30,17 +33,20 @@
   /*MAIN*/
   .main {
       display: flex;
-      flex: 60%;
+      flex: 50%;
       order: 2;
   }
   /*SIDEBARL*/
   .sidebarl {
-      flex: 30%;
+      flex: 10%;
       order: 1;
       justify-content: flex-start;
       align-items: flex-start; 
       text-align: center; 
   }
+  .sidebarl h3 {
+    font-size: 16px;
+}
   .sidebarl ul {
       display: flex;
       flex-direction: column;
@@ -61,6 +67,7 @@
       order:3;
       border: 4px black solid;
       background-color: rgb(143, 220, 20);
+      
    }
   .sidebarr ul {
         display: flex;
@@ -98,7 +105,7 @@
         order: 2;
     }
     .main div {
-        flex-basis: 50%;
+        flex: 50%;
         border: 2px black solid;
       } 
     /*SIDEBARL*/
@@ -109,7 +116,6 @@
     /*SIDEBARR*/
     .sidebarr {
         display: flex;
-        
         flex:15%;
         order:3; 
      }

@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     flex: 100%;  
-    background-color: rgb(2, 0, 128);
+    background-color: white;
     border: 5px black solid;  
 }
 .sidebarl ul{
@@ -20,9 +20,8 @@
     padding:10px 0px 10px 0px ; 
 }  
 .sidebarl h3{
-    display: flex;
-    text-align: center;
-    color: white;
+    color:black;
+    font-size: 14px;
 }
 .sidebarl p {
     display:none;
@@ -31,12 +30,11 @@
 .sidebarl li{
     display: flex;
     text-align: center; 
-    flex-wrap: wrap; 
-   
+    flex-wrap: wrap;   
 }
 .sidebarl a{
     display: flex;
-    color: white;
+    color: black;
     padding: 10px;
     text-decoration: none;
     text-align: center;

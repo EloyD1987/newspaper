@@ -12,11 +12,12 @@
 /*hamburgerMenu*/
 .header button {
     display: flex;
-    padding: none;
+    order: 1;
     justify-content: start;
     align-items: flex-start;
+    pointer-events: painted;
+    padding: none;
     height: 10%;
-    order: 1;
     background-color: rgb(149, 141, 155);
 }
 /* Tittle*/
@@ -24,7 +25,7 @@
     display: flex;
     order: 2;
     padding: 20px;
-    font-size: 80px;
+    font-size: 50px;
     text-align: center;
     vertical-align: center;
 } 

@@ -3,19 +3,16 @@
     display: flex;
     justify-content: center;
     width:  100%;
+    box-sizing: border-box;  
     margin: none;
     padding-top: 20px ;
     border: 4px black solid ;
-    background-color: blue;
+    background-color: silver;
     font-family: 'Times New Roman', Times, serif;
 }
 /*hamburgerMenu*/
 .header button {
-    display: flex;
-    order: 1;
-    justify-content: start;
-    align-items: flex-start;
-    pointer-events: painted;
+    margin-top: 30px;
     padding: none;
     height: 10%;
     background-color: rgb(149, 141, 155);

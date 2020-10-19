@@ -1,4 +1,6 @@
-
+body {
+    box-sizing: border-box;
+}
 .container{
     display: flex;
     flex-direction: row;
@@ -13,7 +15,8 @@
     order: 1;
     flex: 100%;
     background-color:white;
-    border: 4px black solid;   
+    border: 4px black solid; 
+    box-sizing: border-box;  
 }
 .main div{
     border-bottom: 1px black solid;

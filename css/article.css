@@ -5,8 +5,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    flex-basis: 100%;  
-    box-sizing: border-box;     
+    flex-basis: 100%;       
 }
 .main{
     display: flex;
@@ -14,32 +13,31 @@ body {
     flex-wrap: wrap;
     order: 1;
     flex: 100%;
-    background-color:white;
-    border: 4px black solid; 
-    box-sizing: border-box;  
+    background-color:white;   
 }
 .main div{
-    border-bottom: 1px black solid;
     flex-basis: 100%;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 15px;
+    box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.4);
+    transition: 0.8s;
     box-sizing: border-box;
 }
-.main h2 {
-    text-decoration: underline;
+.principal {
     padding: 5px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
 }
-.main h3 {
-    text-decoration: underline;
-    padding: 5px;
-}
-.main p {
+.secondary {
     width: 90%;
-    padding: 0 10px 10px 10px;    
-    font-size: 12px;
+    padding: 0 10px 10px 10px; 
+    font-family: "Courier New", Courier, monospace; 
+    font-size: 12px;     
 }
 .main img {
     width: 90%;
     padding: 10px;    
 }
+

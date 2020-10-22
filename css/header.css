@@ -5,8 +5,7 @@
     width:  100%;
     box-sizing: border-box;  
     margin: none;
-    padding-top: 20px ;
-    border: 4px black solid ;
+    padding-top: 10px ;
     background-color: silver;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -33,6 +32,8 @@
 .date {
     display:flex;
     justify-content: center;
+    padding-top: 5px;
+    color: white;
     background-color: #333;
 }
 /* Navigation Bar*/
@@ -41,6 +42,7 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    box-sizing: border-box;  
     background-color: #333;
 }
 .navbar ul{
@@ -62,9 +64,10 @@
     padding: 10px;
     text-decoration: none;
     text-align: center; 
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .navbar a:hover {
-    border-color: red;
+    border-color: white;
     border-style: solid;
     border-width: 0.2px;
 }

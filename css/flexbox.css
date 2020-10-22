@@ -34,6 +34,7 @@
       justify-content: flex-start;
       align-items: flex-start; 
       text-align: center; 
+      font-size: 14px;
   }
   .sidebarl h3 {
     font-size: 16px;
@@ -56,8 +57,10 @@
       display: flex;
       flex:100%;
       order:3;
-      border: 4px black solid;
-      background-color: rgb(143, 220, 20);
+      margin: 0px 8px 0px 8px ;
+      box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.4);
+      transition: 0.8s;
+      background-color: white;
    }
   .sidebarr ul {
         display: flex;
@@ -66,7 +69,6 @@
         display: flex;
         flex-wrap: wrap;
         flex: 20%;
-        border: 2px black solid;
     }
    .sidebarr a{
         display: flex;

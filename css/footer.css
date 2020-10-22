@@ -1,13 +1,11 @@
 .footer{
     display: flex;
     flex-basis: 100%;
-    border: 4px black solid;
-    background-color: silver;
+    align-items: center; 
+    margin: 8px;
+    background-color: #333;
     font-size: 20px;
-    align-items: center;
-    
 }
 .footer p{
-    padding: 20px;
-    
+    padding: 20px;   
 }

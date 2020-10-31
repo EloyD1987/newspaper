@@ -7,15 +7,25 @@
     display: flex;
     justify-content: center;
     width: 100%; 
-    border: 1px black solid;
+    margin: 20px;
+    font-size: 18px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
 }
-.form {
+.mainform  p {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}
+
+.form1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%; 
-    border: 1px red solid;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace; 
 }
 .column1 {
     display: flex;
@@ -23,31 +33,45 @@
     order: 1;
     width: 100%;
     box-sizing: border-box;
-    border: 1px green solid;
+    padding: 20px 20px 0px 20px;
 }
-.column1 input label {
+.column1 div {
+    padding: 5px;
+}
+.column1 input, label {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 100%;  
 }
+.column1 input {
+    background-color: silver;
+}   
 .column2 {
     display: flex;
     flex-direction: column;
     order:2;
     width: 100%;
     box-sizing: border-box;
-    border: 1px yellow solid;
+    padding: 0px 20px 20px 20px;
 }
-.column2 input label {
+.column2 input, label {
     display: flex;
     flex-direction: column;
-    width: 100%;  
+    box-sizing: border-box;
+    width: 100%; 
+}
+.column2 input {
+    background-color: silver;
+}     
+.column2 div {
+    padding: 5px;
 }
 .button {
     display: flex;
     justify-content: center;
     width: 100%; 
-    border: 1px black solid;
+    font-family:"Comic Sans MS", cursive, sans-serif;
 }
 @media (min-width: 480px) {
     .column1 {
@@ -56,7 +80,14 @@
         flex-wrap: wrap;
         order: 1;
         width: 50%;
-        border: 1px green solid;
+        box-sizing: border-box;
+        padding: 20px 0px 20px 20px;
+    }
+    .column1 div {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        width: 100%;
     }
     .column1 input  {
         display: flex;
@@ -72,8 +103,15 @@
         display: flex;
         flex-direction: column;
         order: 1;
+        box-sizing: border-box;
         width: 50%;
-        border: 1px yellow solid;
+        padding: 20px;
+    }
+    .column2 div {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        width: 100%;
     }
     .column2 input  {
         display: flex;
@@ -83,7 +121,6 @@
     .column2 label  {
         display: flex;
         flex-direction: row;
-        
         width: 25%;  
     }
 

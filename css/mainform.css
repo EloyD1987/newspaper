@@ -46,6 +46,7 @@
 }
 .column1 input {
     background-color: silver;
+    order: 2;
 }   
 .column2 {
     display: flex;
@@ -62,8 +63,12 @@
     width: 100%; 
 }
 .column2 input {
+    box-sizing: border-box;
     background-color: silver;
-}     
+}
+.column2 label {
+    box-sizing: border-box;
+}      
 .column2 div {
     padding: 5px;
 }
@@ -74,6 +79,9 @@
     font-family:"Comic Sans MS", cursive, sans-serif;
 }
 @media (min-width: 480px) {
+    .fontsize {
+         font-size: 10px;
+    }
     .column1 {
         display: flex;
         flex-direction: row;
@@ -123,7 +131,9 @@
         flex-direction: row;
         width: 25%;  
     }
-
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
+    .fontsize {
+        font-size: 16px;
+    }
 }

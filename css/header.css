@@ -53,7 +53,6 @@
 }   
 .navbar li{
     display: flex;
-    justify-content: space-between;
     text-align: center; 
     flex-wrap: wrap;   
 }
@@ -71,6 +70,28 @@
     border-style: solid;
     border-width: 0.2px;
 }
+.navbar a:link {
+    color: white;
+}
 .button {
     display: flex;
+}
+.signin {
+    display: flex;
+    justify-self: end;
+    align-self: flex-end;
+}
+.signin a {
+    display: flex;
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.signin a:link {
+    color: white;
+}
+.signin li {
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
 }

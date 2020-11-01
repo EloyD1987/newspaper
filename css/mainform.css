@@ -17,7 +17,6 @@
     width: 100%; 
     font-family:"Comic Sans MS", cursive, sans-serif;
 }
-
 .form1 {
     display: flex;
     flex-direction: row;
@@ -29,36 +28,57 @@
 }
 .column1 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     order: 1;
     width: 100%;
     box-sizing: border-box;
     padding: 20px 20px 0px 20px;
 }
 .column1 div {
+    box-sizing: border-box;
+    width: 100%; 
     padding: 5px;
 }
-.column1 input, label {
+.column1 input, label, p {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;  
 }
 .column1 input {
     background-color: silver;
+    box-sizing: border-box;
     order: 2;
+}
+.column1 label {
+        box-sizing: border-box;
+        padding-right: 10px;
 }   
+.column1 p {
+    visibility:visible;
+    box-sizing: border-box;
+    order: 3;
+    justify-content: center;
+    width: 100%;
+}
 .column2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     order:2;
     width: 100%;
     box-sizing: border-box;
     padding: 0px 20px 20px 20px;
 }
+.column2 div {
+    width: 100%; 
+    padding: 5px;
+}
 .column2 input, label {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     box-sizing: border-box;
     width: 100%; 
 }
@@ -68,9 +88,14 @@
 }
 .column2 label {
     box-sizing: border-box;
+    padding-right: 10px;
 }      
-.column2 div {
-    padding: 5px;
+.column2 p {
+    visibility:visible;
+    box-sizing: border-box;
+    order: 3;
+    justify-content: center;
+    width: 100%;
 }
 .button {
     display: flex;
@@ -79,9 +104,6 @@
     font-family:"Comic Sans MS", cursive, sans-serif;
 }
 @media (min-width: 480px) {
-    .fontsize {
-         font-size: 10px;
-    }
     .column1 {
         display: flex;
         flex-direction: row;
@@ -94,6 +116,7 @@
     .column1 div {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         box-sizing: border-box;
         width: 100%;
     }
@@ -104,13 +127,15 @@
     }
     .column1 label  {
         display: flex;
+        box-sizing: border-box;
         flex-direction: row;
         width: 25%;  
     }
     .column2 {
         display: flex;
-        flex-direction: column;
-        order: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        order: 2;
         box-sizing: border-box;
         width: 50%;
         padding: 20px;
@@ -118,22 +143,21 @@
     .column2 div {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         box-sizing: border-box;
         width: 100%;
     }
     .column2 input  {
         display: flex;
-        flex-direction: row;
         width: 75%;  
     }
     .column2 label  {
         display: flex;
-        flex-direction: row;
         width: 25%;  
     }
 }
-@media (min-width: 700px) {
-    .fontsize {
-        font-size: 16px;
-    }
+#hi {  
+}
+#name {
+
 }

@@ -4,8 +4,11 @@ var fName = document.querySelector("#name");
 
 var pText = fName.nextElementSibling;
 
+pText.style.visivility = visible ;
 console.log(pText);
 }
+
+pText.style.visivility = visible ;
 /*
 name.onblur = function validation(){
     Name();

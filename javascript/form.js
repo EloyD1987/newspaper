@@ -88,3 +88,24 @@ function hiddencPassword(){
     var errormessage = document.getElementById("cpass").nextElementSibling;
     errormessage.style.visibility =  "hidden" ;
 }
+//Age    
+var vAge = document.getElementById("age");
+//Blur event = show error
+vAge.addEventListener("blur",fAge);
+//Focus Event = hidden error
+vAge.addEventListener("focus", hiddenAge);
+//Function validation of the value  
+
+function fAge(){
+    var aInput = vAge.value;
+    if (!(aInput>=18) || !(aInput%1==0))  { 
+       var errormessage = document.getElementById("age").nextElementSibling;
+       errormessage.style.visibility =  "visible" ;
+    }
+    console.log("Age: " + aInput);
+    return aInput;
+}
+function hiddenAge(){
+    var errormessage = document.getElementById("age").nextElementSibling;
+    errormessage.style.visibility =  "hidden" ;
+}

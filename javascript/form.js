@@ -1,4 +1,4 @@
-window.onload = function(){}
+window.onload = function(){
 
 //Input Full Name    
 var vName = document.getElementById("name");
@@ -9,12 +9,14 @@ vName.addEventListener("focus", hidden);
 //Function validation of the value  
 function fName(){
     var nInput = vName.value;
-    if ((nInput.indexOf(" ") == -1) || (nInput.length < 7)) { 
+    var condition = (nInput.indexOf(" ") == -1) || (nInput.length < 7);
+    if (condition) { 
        var errormessage = document.getElementById("name").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Full Name: " + nInput);
-    return nInput;
+    return ["Full Name: ",nInput,condition];
+
 }
 function hidden(){
     var errormessage = document.getElementById("name").nextElementSibling;
@@ -36,7 +38,7 @@ function fEmail(){
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Email: " + eInput);
-    return eInput;
+    return ("Email: " + eInput)
 }
 function hiddenEmail(){
     var errormessage = document.getElementById("email").nextElementSibling;
@@ -58,14 +60,12 @@ function fPassword(){
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Password: " + pInput);
-    return pInput;
+    return ("Password: " + pInput)
 }
 function hiddenPassword(){
     var errormessage = document.getElementById("pass").nextElementSibling;
     errormessage.style.visibility =  "hidden" ;
 }
-
-
 //Repeat Password    
 var vcPassword = document.getElementById("cpass");
 //Blur event = show error
@@ -108,4 +108,143 @@ function fAge(){
 function hiddenAge(){
     var errormessage = document.getElementById("age").nextElementSibling;
     errormessage.style.visibility =  "hidden" ;
+}
+//Phone  
+var vPhone = document.getElementById("phone");
+//Blur event = show error
+vPhone.addEventListener("blur",fPhone);
+//Focus Event = hidden error
+vPhone.addEventListener("focus", hiddenPhone);
+//Function validation of the value  
+function fPhone(){
+    var phInput = vPhone.value;
+    var val = /^[0-9]{7,}$/;
+    if ( !(val.test(phInput))) { 
+       var errormessage = document.getElementById("phone").nextElementSibling;
+       errormessage.style.visibility =  "visible" ;
+    }
+    console.log((val.test(phInput)));
+    console.log("Phone: " + phInput);
+    return phInput;
+}
+function hiddenPhone(){
+    var errormessage = document.getElementById("phone").nextElementSibling;
+    errormessage.style.visibility =  "hidden" ;
+}
+//Address  
+var vAddress = document.getElementById("address");
+//Blur event = show error
+vAddress.addEventListener("blur",fAddress);
+//Focus Event = hidden error
+vAddress.addEventListener("focus", hiddenAddress);
+//Function validation of the value  
+function fAddress(){
+    var aInput = vAddress.value;
+    var val = /^([a-z0-9]{2,}[\s]+)+([0-9]+)$/;
+    if (!val.test(aInput)) { 
+       var errormessage = document.getElementById("address").nextElementSibling;
+       errormessage.style.visibility =  "visible" ;
+    }
+    console.log("Address: " + aInput);
+    return aInput;
+}
+function hiddenAddress(){
+    var errormessage = document.getElementById("address").nextElementSibling;
+    errormessage.style.visibility =  "hidden" ;
+}
+
+//City 
+var vCity = document.getElementById("city");
+//Blur event = show error
+vCity.addEventListener("blur",fCity);
+//Focus Event = hidden error
+vCity.addEventListener("focus", hiddenCity);
+//Function validation of the value  
+function fCity(){
+    var cInput = vCity.value;
+    var val = /^[a-z]{3,}$/i;
+    if (!val.test(cInput)) { 
+       var errormessage = document.getElementById("city").nextElementSibling;
+       errormessage.style.visibility =  "visible" ;
+    }
+    console.log("City: " + cInput);
+    return cInput;
+}
+function hiddenCity(){
+    var errormessage = document.getElementById("city").nextElementSibling;
+    errormessage.style.visibility =  "hidden" ;
+}
+//Zip Code 
+var vZip = document.getElementById("zipcode");
+//Blur event = show error
+vZip.addEventListener("blur",fZip);
+//Focus Event = hidden error
+vZip.addEventListener("focus", hiddenZip);
+//Function validation of the value  
+function fZip(){
+    var zInput = vAddress.value;
+    var val = /^[0-9]{3,}$/;
+    if (!val.test(zInput)) { 
+       var errormessage = document.getElementById("zipcode").nextElementSibling;
+       errormessage.style.visibility =  "visible" ;
+    }
+    console.log("Address: " + aInput);
+    return zInput;
+}
+function hiddenZip(){
+    var errormessage = document.getElementById("zipcode").nextElementSibling;
+    errormessage.style.visibility =  "hidden" ;
+}
+//I.D.N
+var vId = document.getElementById("idn");
+//Blur event = show error
+vId.addEventListener("blur",fId);
+//Focus Event = hidden error
+vId.addEventListener("focus", hiddenId);
+//Function validation of the value  
+function fId(){
+    var iInput = vId.value;
+    var val = /^[0-9]{7,8}?$/;
+    if (!val.test(iInput)) { 
+       var errormessage = document.getElementById("idn").nextElementSibling;
+       errormessage.style.visibility =  "visible" ;
+    }
+    console.log("I.D. number: " + iInput);
+    return iInput;
+}
+function hiddenId(){
+    var errormessage = document.getElementById("idn").nextElementSibling;
+    errormessage.style.visibility =  "hidden" ;
+}
+
+//Send button
+var sendButton =  document.querySelector('input[type="submit"]');
+sendButton.addEventListener('click',send);
+function send() {
+    event.preventDefault();
+    var validationFunctions = [fName,fEmail,fPassword];
+    var list = "";
+    var listError= "";
+    for (var i=0 ; i< validationFunctions.length; i++)
+    { var arrayReturn = validationFunctions[i]();
+      if ( arrayReturn[2]=== true){
+          listError += arrayReturn[0] + " invalid \n";
+      }else { 
+          list += arrayReturn[0] + arrayReturn[1] +"\n"; 
+        } 
+    }
+    if (listError===""){
+        alert(list);
+    }else { 
+        alert(listError);
+    }
+}
+
+//Name in the title
+var nameInput =  document.getElementById('name');
+nameInput.addEventListener('keydown',titleName);
+
+function titleName(){
+    document.getElementById('hi').innerText = 'Hi... ' +  event.target.value;
+}
 }

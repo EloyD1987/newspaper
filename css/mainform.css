@@ -104,13 +104,18 @@
 .button {
     display: flex;
     justify-content: center;
+    order: 3;
     width: 100%; 
     font-family:"Comic Sans MS", cursive, sans-serif;
 }
-.button button {
+.button input {
     background-color: #333;
-    color:white;
+    color:white;    
 }
+.button input [type = submit]{
+    
+}
+
 @media (min-width: 480px) {
     .column1 {
         display: flex;

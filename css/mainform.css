@@ -59,11 +59,12 @@
         padding-right: 10px;
 }   
 .column1 p {
-    visibility:visible;
+    visibility: hidden;
     box-sizing: border-box;
     order: 3;
     justify-content: center;
     width: 100%;
+    font-size: 12px;
 }
 .column2 {
     display: flex;
@@ -93,17 +94,22 @@
     padding-right: 10px;
 }      
 .column2 p {
-    visibility:visible;
+    visibility: hidden;
     box-sizing: border-box;
     order: 3;
     justify-content: center;
     width: 100%;
+    font-size: 12px;
 }
 .button {
     display: flex;
     justify-content: center;
     width: 100%; 
     font-family:"Comic Sans MS", cursive, sans-serif;
+}
+.button button {
+    background-color: #333;
+    color:white;
 }
 @media (min-width: 480px) {
     .column1 {

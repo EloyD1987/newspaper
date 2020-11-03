@@ -31,14 +31,14 @@ vEmail.addEventListener("blur", fEmail);
 vEmail.addEventListener("focus", hiddenEmail);
 //Function validation of the value  
 function fEmail(){
-    var eInput = vEmail.value;
-    var val =/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if (!val.test(eInput)){
+    var eInput = vEmail.value; 
+    var condition = (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(eInput));
+    if (condition){
        var errormessage = document.getElementById("email").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Email: " + eInput);
-    return ("Email: " + eInput)
+    return ["Email: ",eInput,condition];
 }
 function hiddenEmail(){
     var errormessage = document.getElementById("email").nextElementSibling;
@@ -54,13 +54,13 @@ vPassword.addEventListener("focus", hiddenPassword);
 
 function fPassword(){
     var pInput = vPassword.value;
-    var val = /[^A-Za-z0-9]/;
-    if ( pInput.length<8 || val.test(pInput) ) { 
+    var condition =  ( pInput.length<8 || /[^A-Za-z0-9]/.test(pInput) )
+    if ( condition) { 
        var errormessage = document.getElementById("pass").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Password: " + pInput);
-    return ("Password: " + pInput)
+    return ["Password: ",pInput,condition];
 }
 function hiddenPassword(){
     var errormessage = document.getElementById("pass").nextElementSibling;
@@ -76,13 +76,13 @@ vcPassword.addEventListener("focus", hiddencPassword);
 
 function fcPassword(){
     var cpInput = vcPassword.value;
-    var val = /[^A-Za-z0-9]/;
-    if ( cpInput.length<8 || val.test(cpInput) ) { 
+    var condition = (cpInput.length<8 || /[^A-Za-z0-9]/.test(cpInput))
+    if ( condition ) { 
        var errormessage = document.getElementById("cpass").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Confirm Password: " + cpInput);
-    return cpInput;
+    return ["Repeat Password: ",cpInput,condition]
 }
 function hiddencPassword(){
     var errormessage = document.getElementById("cpass").nextElementSibling;
@@ -98,12 +98,13 @@ vAge.addEventListener("focus", hiddenAge);
 
 function fAge(){
     var aInput = vAge.value;
-    if (!(aInput>=18) || !(aInput%1==0))  { 
+    var condition = (!(aInput>=18) || !(aInput%1==0));
+    if (condition)  { 
        var errormessage = document.getElementById("age").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Age: " + aInput);
-    return aInput;
+    return ["Age: ",aInput,condition];
 }
 function hiddenAge(){
     var errormessage = document.getElementById("age").nextElementSibling;
@@ -118,14 +119,13 @@ vPhone.addEventListener("focus", hiddenPhone);
 //Function validation of the value  
 function fPhone(){
     var phInput = vPhone.value;
-    var val = /^[0-9]{7,}$/;
-    if ( !(val.test(phInput))) { 
+    var condition = (!/^[0-9]{7,}$/.test(phInput))
+    if (condition) { 
        var errormessage = document.getElementById("phone").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
-    console.log((val.test(phInput)));
     console.log("Phone: " + phInput);
-    return phInput;
+    return ["Phone: ",phInput,condition];
 }
 function hiddenPhone(){
     var errormessage = document.getElementById("phone").nextElementSibling;
@@ -140,13 +140,13 @@ vAddress.addEventListener("focus", hiddenAddress);
 //Function validation of the value  
 function fAddress(){
     var aInput = vAddress.value;
-    var val = /^([a-z0-9]{2,}[\s]+)+([0-9]+)$/;
-    if (!val.test(aInput)) { 
+    var condition = (!/^([a-z0-9]{2,}[\s]+)+([0-9]+)$/.test(aInput));
+    if (condition) { 
        var errormessage = document.getElementById("address").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("Address: " + aInput);
-    return aInput;
+    return ["Address: ",aInput,condition];
 }
 function hiddenAddress(){
     var errormessage = document.getElementById("address").nextElementSibling;
@@ -162,13 +162,13 @@ vCity.addEventListener("focus", hiddenCity);
 //Function validation of the value  
 function fCity(){
     var cInput = vCity.value;
-    var val = /^[a-z]{3,}$/i;
-    if (!val.test(cInput)) { 
+    var condition = (!/^[a-z]{3,}$/i.test(cInput))
+    if (condition) { 
        var errormessage = document.getElementById("city").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("City: " + cInput);
-    return cInput;
+    return ["City: ",cInput,condition];
 }
 function hiddenCity(){
     var errormessage = document.getElementById("city").nextElementSibling;
@@ -182,14 +182,14 @@ vZip.addEventListener("blur",fZip);
 vZip.addEventListener("focus", hiddenZip);
 //Function validation of the value  
 function fZip(){
-    var zInput = vAddress.value;
-    var val = /^[0-9]{3,}$/;
-    if (!val.test(zInput)) { 
+    var zInput = vZip.value;
+    var condition = (!/^[0-9]{3,}$/.test(zInput));
+    if (condition) { 
        var errormessage = document.getElementById("zipcode").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
-    console.log("Address: " + aInput);
-    return zInput;
+    console.log("Zip code: " + zInput);
+    return ["Zip code: ",zInput,condition];
 }
 function hiddenZip(){
     var errormessage = document.getElementById("zipcode").nextElementSibling;
@@ -204,25 +204,24 @@ vId.addEventListener("focus", hiddenId);
 //Function validation of the value  
 function fId(){
     var iInput = vId.value;
-    var val = /^[0-9]{7,8}?$/;
-    if (!val.test(iInput)) { 
+    var condition = (!/^[0-9]{7,8}?$/.test(iInput));
+    if (condition) { 
        var errormessage = document.getElementById("idn").nextElementSibling;
        errormessage.style.visibility =  "visible" ;
     }
     console.log("I.D. number: " + iInput);
-    return iInput;
+    return ["I.D.number: ",iInput,condition];
 }
 function hiddenId(){
     var errormessage = document.getElementById("idn").nextElementSibling;
     errormessage.style.visibility =  "hidden" ;
 }
-
 //Send button
 var sendButton =  document.querySelector('input[type="submit"]');
 sendButton.addEventListener('click',send);
 function send() {
     event.preventDefault();
-    var validationFunctions = [fName,fEmail,fPassword];
+    var validationFunctions = [fName,fEmail,fPassword,fcPassword,fAge,fPhone, fAddress, fCity, fZip, fId];
     var list = "";
     var listError= "";
     for (var i=0 ; i< validationFunctions.length; i++)
@@ -239,10 +238,9 @@ function send() {
         alert(listError);
     }
 }
-
 //Name in the title
 var nameInput =  document.getElementById('name');
-nameInput.addEventListener('keydown',titleName);
+nameInput.addEventListener('keyup',titleName);
 
 function titleName(){
     document.getElementById('hi').innerText = 'Hi... ' +  event.target.value;

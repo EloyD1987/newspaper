@@ -112,9 +112,7 @@
     background-color: #333;
     color:white;    
 }
-.button input [type = submit]{
-    
-}
+
 
 @media (min-width: 480px) {
     .column1 {
@@ -168,8 +166,4 @@
         display: flex;
         width: 100%;  
     }
-}
-#hi {  
-}
-#name {
 }

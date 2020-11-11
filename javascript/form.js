@@ -140,7 +140,7 @@ vAddress.addEventListener("focus", hiddenAddress);
 //Function validation of the value  
 function fAddress(){
     var aInput = vAddress.value;
-    var condition = (!/^([a-z0-9]{2,}[\s]+)+([0-9]+)$/.test(aInput));
+    var condition = (!/^([a-z]{5,})$/.test(aInput));
     if (condition) { 
        var errormessage = document.getElementById("address").nextElementSibling;
        errormessage.style.visibility =  "visible" ;

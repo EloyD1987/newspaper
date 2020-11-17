@@ -76,7 +76,8 @@ vcPassword.addEventListener("focus", hiddencPassword);
 
 function fcPassword(){
     var cpInput = vcPassword.value;
-    var condition = (cpInput.length<8 || /[^A-Za-z0-9]/.test(cpInput))
+    var pInput = vPassword.value;
+    var condition = (cpInput.length<8 || /[^A-Za-z0-9]/.test(cpInput)|| (pInput != cpInput) )
     if ( condition ) { 
        var errormessage = document.getElementById("cpass").nextElementSibling;
        errormessage.style.visibility =  "visible" ;

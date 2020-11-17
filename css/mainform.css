@@ -55,8 +55,8 @@
     order: 2;
 }
 .column1 label {
-        box-sizing: border-box;
-        padding-right: 10px;
+    box-sizing: border-box;
+    padding-right: 10px;
 }   
 .column1 p {
     visibility: hidden;
@@ -86,11 +86,9 @@
     width: 100%; 
 }
 .column2 input {
-    box-sizing: border-box;
     background-color: silver;
 }
 .column2 label {
-    box-sizing: border-box;
     padding-right: 10px;
 }      
 .column2 p {
@@ -112,24 +110,16 @@
     background-color: #333;
     color:white;    
 }
-
-
 @media (min-width: 480px) {
     .column1 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         order: 1;
         width: 50%;
-        box-sizing: border-box;
         padding: 20px 0px 20px 20px;
     }
     .column1 div {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        box-sizing: border-box;
-        width: 100%;
     }
     .column1 input  {
         display: flex;
@@ -138,16 +128,11 @@
     }
     .column1 label  {
         display: flex;
-        box-sizing: border-box;
         flex-direction: row;
         width: 100%;  
     }
     .column2 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         order: 2;
-        box-sizing: border-box;
         width: 50%;
         padding: 20px;
     }
